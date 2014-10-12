@@ -1,0 +1,16 @@
+{
+  "name": "USB POS Printer",
+  "version": "0.1",
+  "manifest_version": 2,
+  "minimum_chrome_version": "23",
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+"externally_connectable": {
+  "matches": ["*://localhost/*"]
+},
+  "permissions": ["usb"],
+  "optional_permissions": [ {"usbDevices": [{"vendorId": 1046, "productId": 20497}]}]
+}
